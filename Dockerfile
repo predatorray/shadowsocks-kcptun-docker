@@ -27,7 +27,7 @@ ARG kcptun_targz_url="https://github.com/xtaci/kcptun/releases/download/v2017120
 RUN set -ex \
     && apt-get update \
     && apt-get install -y --no-install-recommends wget \
-    && wget "${kcptun_targz_url}" -O /tmp/kcptun.tar.gz \
+    && wget --no-check-certificate "${kcptun_targz_url}" -O /tmp/kcptun.tar.gz \
     && mkdir -p /usr/local/kcptun && tar -zxf /tmp/kcptun.tar.gz -C /usr/local/kcptun \
     && rm -f /tmp/kcptun.tar.gz \
     && apt-get purge -y --auto-remove wget \
