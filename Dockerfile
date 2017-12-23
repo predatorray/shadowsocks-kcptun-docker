@@ -32,3 +32,8 @@ RUN set -ex \
     && rm -f /tmp/kcptun.tar.gz \
     && apt-get purge -y --auto-remove wget \
     && rm -rf /var/log/dpkg.log /var/lib/apt/lists/* /var/log/apt/*
+
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY shadowsocks-kcptun.supervisor.conf /etc/supervisor/conf.d/shadowsocks-kcptun.conf
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
