@@ -1,5 +1,7 @@
 # shadowsocks-kcptun-docker
 
+![docker-pulls](https://img.shields.io/docker/pulls/zetaplusae/shadowsocks-kcptun)
+
 集成kcptun的Shadowsocks镜像
 
 ## 运行方式
